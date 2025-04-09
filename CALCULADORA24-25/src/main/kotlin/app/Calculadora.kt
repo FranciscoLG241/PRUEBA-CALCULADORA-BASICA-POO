@@ -7,7 +7,7 @@ import org.example.ui.IEntradaSalida
 class Calculadora(private val ui: IEntradaSalida) {
 
     private fun pedirNumero(msj: String, msjError: String = "Número no válido!"): Double {
-        return ui.pedirDouble(msj) ?: throw InfoCalcException(msjError)
+        return ui.pedirDouble(msj) ?: throw NumberFormatException(msjError)
     }
 
     private fun pedirInfo() = Triple(
